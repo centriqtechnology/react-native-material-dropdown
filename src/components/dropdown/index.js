@@ -381,13 +381,7 @@ export default class Dropdown extends PureComponent {
     let { baseColor: backgroundColor } = this.props;
     let triangleStyle = { backgroundColor };
 
-    return (
-      <View style={styles.accessory}>
-        <View style={styles.triangleContainer}>
-          <View style={[styles.triangle, triangleStyle]} />
-        </View>
-      </View>
-    );
+    return ( this.props.accessory);
   }
 
   renderItems() {
@@ -450,6 +444,7 @@ export default class Dropdown extends PureComponent {
       animationDuration,
       itemPadding,
       dropdownPosition,
+      accessory
     } = this.props;
 
     let { left, top, width, opacity, selected, modal } = this.state;
@@ -513,7 +508,7 @@ export default class Dropdown extends PureComponent {
     return (
       <View onLayout={() => undefined} ref={this.updateContainerRef} style={containerStyle}>
         <TouchableWithoutFeedback onPress={this.onPress}>
-          <View pointerEvents='box-only'>
+          <View pointerEvents='box-only' style={{paddingTop: 5, paddingBottom: 5}}>
             {this.renderBase()}
 
             <Ripple
