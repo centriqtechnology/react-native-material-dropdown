@@ -369,6 +369,11 @@ export default class Dropdown extends PureComponent {
       <TextField
         {...props}
 
+        style={{fontFamily: 'proba-regular'}}
+        itemTextStyle={{fontFamily: 'proba-regular'}}
+        labelTextStyle={{fontFamily: 'proba-regular'}}
+        labelFontSize={15}
+
         value={title}
         editable={false}
         onChangeText={undefined}
