@@ -37,7 +37,8 @@ export default class Dropdown extends PureComponent {
     itemCount: 4,
     itemPadding: 8,
 
-    labelHeight: 32,
+    //labelHeight: 32,
+    labelHeight: 22.5,
   };
 
   static propTypes = {
@@ -71,6 +72,7 @@ export default class Dropdown extends PureComponent {
     baseColor: PropTypes.string,
 
     itemTextStyle: Text.propTypes.style,
+    labelTextStyle: Text.propTypes.style,
 
     itemCount: PropTypes.number,
     itemPadding: PropTypes.number,
